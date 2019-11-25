@@ -18,28 +18,10 @@ class App extends Component {
   handleSubmit(event) {
     console.log('A name was submitted: ' + this.state.word);
 
-    axios.post(`http://localhost:8080/page?word=`, this.state.word)
-      .then(res => {debugger
+    axios.get(`http://localhost:8080/word/`, this.state.word)
+      .then(res => {
      console.log(res);
       })
-
-
-    // axios({
-    //   method: 'post',
-    //   url: 'http://localhost:8080/page',
-    //   data: this.state.word
-    // }).then(response => {
-    //     this.setState({
-    //         loading: false
-    //     });
-
-    //     if (response.data.code === 200) {
-    //         this.setState({
-    //             sended: true,
-    //             email: ''
-    //         })
-    //     }
-    // });
 
   }
 
