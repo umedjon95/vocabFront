@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import './App.css';
+import './Wordlist.css';
 import axios from 'axios';
 
-class App extends Component {
+class Wordlist extends Component {
 
 constructor(props) {
    super(props)
@@ -74,6 +74,7 @@ render() {
       </div>
       )
    }
+
 }
 
-export default App;
+export default Wordlist;
